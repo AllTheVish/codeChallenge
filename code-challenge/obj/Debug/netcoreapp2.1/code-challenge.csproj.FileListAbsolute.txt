@@ -1,0 +1,16 @@
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\resources\EmployeeSeedData.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.deps.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.dev.json
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.dll
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csprojAssemblyReference.cache
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfoInputs.cache
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfo.cs
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.dll
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.genruntimeconfig.cache
+C:\Users\allth\Downloads\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csproj.CoreCompileInputs.cache

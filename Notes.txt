@@ -1,0 +1,54 @@
+- Link for the .Net core 2.1 SDK results in a 404
+	- to avoid potential issues i installed the lastest 2.1 (2.1.811) version of the .Net Core even thouth there is a 3.x version available.
+
+- General Code Cleanup 
+	- Removed unused Using statements
+
+- Employee Controller
+	- Create employee
+		- Operation will throw an error the employee passed in is null, since there is no validation
+			- Added Null check onthe employee object and lof error if it is null.
+			- Did not add any other validation as none of the fields on an employee are required for creation
+				- Is there a reason nothing is required?
+	- GetEmployeeById
+		- Added [FromRoute] attribute to the id parameter to make it a bit cleanerGetEmployeeById
+		- Fixed the repositry mothod to include direct reports, to match the Employee schema noted in the ReadMe
+	- ReplaceEmployee	
+		- Is there a reason the PUT does not support the creation of an employee if it is not found?
+		- Is there a reason a PATCH operation was not also created for updating an employee? 
+			- seems like it would be benificial for a PATCH operation to help simplify calls when just certian aspects of an employ ee needed updating.
+		- Added [FromRoute] attribute to the id parameter to make it a bit cleanerGetEmployeeById
+
+
+- Employee Service
+	- Replace
+		- method will return the new employee without actuall doing any changes if the originalEmployee is null
+			- even though this method is only called from a spot where the existing employ is validated to be null beforhand, 
+			- the service method should properly handle the case and not return the new employee if the original employee is null.
+		- method will remove the original employee object before even chedking if the new employee object is not null
+			- if the true intent is to support a delete opeation it should probably be broken out into a seperate method in the service
+			- As it stands the one place it is called from is the PUT operation in the Employee controller and best practices would indicate that the PUT not be used for Deletion of an Object
+			- Instead a DELETE operation should be created to properly handle it.
+
+-Employee Repository
+	- GetById
+		- Added support .Include for Direct reports, as they were always being returned as null property when doing a get on an employee
+
+- Compensation Task
+	- Since the given task does not flesh out full requirements for the feature functionality, I made the following assumptions:
+		- The system will allow multiple compensation records to exist for a given employee, provides the ability for a historical record of compensation changes over time.
+		- when creating a compensation for an employee if if the effective date provided is before an existing compensation for the employee the system will error
+		- when getting the compensation for an employee 
+			- all records for that employee will be returned but the API endpoint supports filtering the response
+		- an operation to update compensation record for an employee may be created later on and is not in the scope of this feature request.
+	- Compensation Controller
+		- When creating a compensation object, it did not make sense to send the full employee object on the request.
+			- The request will support an employeeId along with the salary and effective date.
+			- The response from a create or get will include the full employee information.
+		- Future enhancement would be to refine the request and response objects to reduce redundant data being deliverd.
+
+--Unit Tests--
+	- Created unit test for Employee controller
+		- tests for changes made to existing operations
+		- tests for the operation created for getting the reporting structure
+	- Created unit tests for the Compensation controller
